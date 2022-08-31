@@ -101,6 +101,7 @@ console.log('Task 8: ');
 
 function lygineSuma(a, b){
     let output = 0;
+    
     if(typeof a === 'number' && typeof b === 'number'){
         output = a + b;
     }
@@ -124,8 +125,6 @@ console.log(lygineSuma([2,2,3], [2,1]));
 console.log('Task 9: ');
 
 function pirminisSkaicius(a){
-    let num = 0;
-
     if(typeof a !== 'number'){
         return 'Tipas turi buti skaicius';
     }
@@ -141,7 +140,7 @@ function pirminisSkaicius(a){
     }
     return 'Skaicius ' + a + ' nera pirminis';
 }
-console.log(pirminisSkaicius(23));
+console.log(pirminisSkaicius(2));
 
 //Task 10
 console.log('Task 10: ');
