@@ -123,30 +123,35 @@ console.log(lygineSuma([2,2,3], [2,1]));
 //Task 9
 console.log('Task 9: ');
 
-//Nebaigtas
 function pirminisSkaicius(a){
     let num = 0;
+
     if(typeof a !== 'number'){
         return 'Tipas turi buti skaicius';
+    }
+    if(a === 2 || a === 3 || a === 5 || a === 7 || a === 11){
+        return 'Skaicius ' + a + ' yra pirminis';
     }
     if(a % 2 === 0){
         return 'Skaicius ' + a + ' nera pirminis';
     }
-    if(a % 1 === 0){
+    //checking if number is divisble to given conditions
+    if(a % Math.sqrt(a) !== 0 && a % 3 !== 0 && a % 5 !== 0 && a % 7 !== 0 && a % 11 !== 0){
         return 'Skaicius ' + a + ' yra pirminis';
     }
     return 'Skaicius ' + a + ' nera pirminis';
 }
-
-console.log(pirminisSkaicius(7));
+console.log(pirminisSkaicius(23));
 
 //Task 10
 console.log('Task 10: ');
 
 function telefonoNumeris(a){
-    if(Array.isArray(a))
+    if(!Array.isArray(a))
+        return 'Ne masyvas';
+    if(a.length === 10)
         return `(${a[0]}${a[1]}${a[2]}) ${a[3]}${a[4]}${a[5]}-${a[6]}${a[7]}${a[8]}${a[9]}`;
-    return 'Ne masyvas';
+    return 'Masyvas turi būti 10 ilgio';
 }
 
 console.log(telefonoNumeris([3,7,0,3,2,3,2,4,1,2]));
